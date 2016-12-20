@@ -1,7 +1,7 @@
 package com.github.paolorotolo.appintro;
 
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
+import android.support.annotation.DrawableRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -101,7 +101,7 @@ public abstract class AppIntroBaseFragment extends Fragment implements ISlideSel
             }
         }
         i.setImageResource(drawable);
-        mainLayout.setBackgroundColor(bgColor);
+        mainLayout.setBackground(getResources().getDrawable(bgColor));
 
         return v;
     }
@@ -133,8 +133,8 @@ public abstract class AppIntroBaseFragment extends Fragment implements ISlideSel
     }
 
     @Override
-    public void setBackgroundColor(@ColorInt int backgroundColor) {
-        mainLayout.setBackgroundColor(backgroundColor);
+    public void setBackgroundColor(@DrawableRes int backgroundColor) {
+        mainLayout.setBackground(getResources().getDrawable(backgroundColor));
     }
 
     @LayoutRes

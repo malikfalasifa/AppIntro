@@ -7,12 +7,12 @@ import android.support.annotation.DrawableRes;
 public final class AppIntro2Fragment extends AppIntroBaseFragment {
     public static AppIntroFragment newInstance(CharSequence title, CharSequence description,
                                                @DrawableRes int imageDrawable,
-                                               @ColorInt int bgColor) {
-        return newInstance(title, description, imageDrawable, bgColor, 0, 0);
+                                               @DrawableRes int bgDrawable) {
+        return newInstance(title, description, imageDrawable, bgDrawable, 0, 0);
     }
 
     public static AppIntroFragment newInstance(CharSequence title, CharSequence description,
-                                               @DrawableRes int imageDrawable, @ColorInt int bgColor,
+                                               @DrawableRes int imageDrawable, @DrawableRes int bgDrawable,
                                                @ColorInt int titleColor, @ColorInt int descColor) {
         AppIntroFragment slide = new AppIntroFragment();
         Bundle args = new Bundle();
@@ -21,7 +21,7 @@ public final class AppIntro2Fragment extends AppIntroBaseFragment {
         args.putString(ARG_DESC, description.toString());
         args.putString(ARG_DESC_TYPEFACE, null);
         args.putInt(ARG_DRAWABLE, imageDrawable);
-        args.putInt(ARG_BG_COLOR, bgColor);
+        args.putInt(ARG_BG_COLOR, bgDrawable);
         args.putInt(ARG_TITLE_COLOR, titleColor);
         args.putInt(ARG_DESC_COLOR, descColor);
         slide.setArguments(args);
@@ -32,14 +32,14 @@ public final class AppIntro2Fragment extends AppIntroBaseFragment {
     public static AppIntroFragment newInstance(CharSequence title, String titleTypeface,
                                                CharSequence description, String descTypeface,
                                                @DrawableRes int imageDrawable,
-                                               @ColorInt int bgColor) {
-        return newInstance(title, titleTypeface, description, descTypeface, imageDrawable, bgColor,
+                                               @DrawableRes int bgDrawable) {
+        return newInstance(title, titleTypeface, description, descTypeface, imageDrawable, bgDrawable,
                 0, 0);
     }
 
     public static AppIntroFragment newInstance(CharSequence title, String titleTypeface,
                                                CharSequence description, String descTypeface,
-                                               @DrawableRes int imageDrawable, @ColorInt int bgColor,
+                                               @DrawableRes int imageDrawable, @DrawableRes int bgDrawable,
                                                @ColorInt int titleColor, @ColorInt int descColor) {
         AppIntroFragment slide = new AppIntroFragment();
         Bundle args = new Bundle();
@@ -48,7 +48,7 @@ public final class AppIntro2Fragment extends AppIntroBaseFragment {
         args.putString(ARG_DESC, description.toString());
         args.putString(ARG_DESC_TYPEFACE, descTypeface);
         args.putInt(ARG_DRAWABLE, imageDrawable);
-        args.putInt(ARG_BG_COLOR, bgColor);
+        args.putInt(ARG_BG_COLOR, bgDrawable);
         args.putInt(ARG_TITLE_COLOR, titleColor);
         args.putInt(ARG_DESC_COLOR, descColor);
         slide.setArguments(args);
